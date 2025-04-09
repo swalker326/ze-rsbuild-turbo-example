@@ -1,7 +1,7 @@
 import { dependencies } from "./package.json";
-import type { ModuleFederationConfig } from "@rsbuild/core";
+import { createModuleFederationConfig } from "@module-federation/enhanced";
 
-export const mfConfig: ModuleFederationConfig["options"] = {
+export const mfConfig = createModuleFederationConfig({
   name: "settings",
   filename: "remoteEntry.js",
   exposes: {
@@ -20,4 +20,4 @@ export const mfConfig: ModuleFederationConfig["options"] = {
       requiredVersion: false
     }
   }
-};
+});
