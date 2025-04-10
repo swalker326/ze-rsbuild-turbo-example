@@ -13,8 +13,8 @@ const targets = ["chrome >= 87", "edge >= 88", "firefox >= 78", "safari >= 14"];
 export default withZephyr()({
   context: __dirname,
   output: {
-    uniqueName: "host",
-    publicPath: "auto"
+    publicPath: "auto",
+    uniqueName: "host"
   },
   devServer: { port: 3000 },
   entry: {

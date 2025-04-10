@@ -8,6 +8,7 @@ export const mfConfig = createModuleFederationConfig({
   remotes: {
     settings: "settings@http://localhost:3001/remoteEntry.js"
   },
+  dts: true,
   shared: {
     ...dependencies,
     react: {
